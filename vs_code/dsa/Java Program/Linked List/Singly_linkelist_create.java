@@ -44,7 +44,7 @@ public class Singly_linkelist_create {
         int count = 0;
         while (temp != null) {
             temp = temp.next;
-            count += count;
+            count =count+1;
         }
         System.out.println("List size: " + count);
     }
@@ -201,4 +201,5 @@ public class Singly_linkelist_create {
             }
         }
     }
+
 }
