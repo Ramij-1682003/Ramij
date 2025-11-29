@@ -1,0 +1,22 @@
+//https://leetcode.com/problems/find-the-duplicate-number/description/
+
+class Solution {
+    public int findDuplicate(int[] arr) {
+        int i=0;
+        while(i<arr.length){
+            if(arr[i]!=arr[arr[i]-1]){
+                int temp=arr[arr[i]-1];
+                arr[arr[i]-1]=arr[i];
+                arr[i]=temp;
+            }
+            else{
+                
+                if(i!=arr[i]-1){
+                    return arr[i];
+                }
+                i++;
+            }
+        }
+        return -1;
+    }
+}
